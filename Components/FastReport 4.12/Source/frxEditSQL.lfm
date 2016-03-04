@@ -1,0 +1,61 @@
+object frxSQLEditorForm: TfrxSQLEditorForm
+  Left = 200
+  Height = 307
+  Top = 107
+  Width = 432
+  Caption = 'Lines'
+  ClientHeight = 307
+  ClientWidth = 432
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnHide = FormHide
+  OnShow = FormShow
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '0.9.29'
+  object ToolBar: TToolBar
+    Left = 0
+    Height = 23
+    Top = 0
+    Width = 432
+    AutoSize = True
+    BorderWidth = 2
+    ButtonHeight = 23
+    EdgeBorders = []
+    TabOrder = 0
+    object QBB: TToolButton
+      Left = 0
+      Top = 0
+      ImageIndex = 58
+      Visible = False
+      OnClick = QBBClick
+    end
+    object ParamsB: TToolButton
+      Left = 1
+      Top = 0
+      ImageIndex = 71
+      OnClick = ParamsBClick
+    end
+    object ToolButton2: TToolButton
+      Left = 24
+      Top = 0
+      Width = 8
+      ImageIndex = 58
+      Style = tbsSeparator
+    end
+    object CancelB: TToolButton
+      Left = 32
+      Hint = 'Cancel'
+      Top = 0
+      ImageIndex = 55
+      OnClick = CancelBClick
+    end
+    object OkB: TToolButton
+      Left = 55
+      Hint = 'OK'
+      Top = 0
+      ImageIndex = 56
+      OnClick = OkBClick
+    end
+  end
+end

@@ -1,0 +1,12 @@
+object frxPopupForm: TfrxPopupForm
+  Left = 201
+  Height = 31
+  Top = 132
+  Width = 658
+  BorderStyle = bsNone
+  Caption = ' '
+  FormStyle = fsStayOnTop
+  OnClose = FormClose
+  OnDeactivate = FormDeactivate
+  LCLVersion = '0.9.31'
+end

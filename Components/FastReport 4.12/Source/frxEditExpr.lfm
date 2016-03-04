@@ -1,0 +1,105 @@
+object frxExprEditorForm: TfrxExprEditorForm
+  Left = 200
+  Height = 546
+  Top = 108
+  Width = 640
+  ActiveControl = ExprMemo
+  BorderIcons = [biSystemMenu, biMinimize, biMaximize, biHelp]
+  Caption = 'Expression Editor'
+  ClientHeight = 546
+  ClientWidth = 640
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnKeyDown = FormKeyDown
+  OnResize = FormResize
+  OnShow = FormShow
+  ShowHint = True
+  LCLVersion = '0.9.31'
+  object Splitter1: TSplitter
+    Cursor = crVSplit
+    Left = 0
+    Height = 3
+    Top = 450
+    Width = 640
+    Align = alBottom
+    ResizeAnchor = akBottom
+  end
+  object ExprMemo: TMemo
+    Left = 0
+    Height = 56
+    Top = 453
+    Width = 640
+    Align = alBottom
+    BorderStyle = bsNone
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Courier New'
+    OnDragDrop = ExprMemoDragDrop
+    OnDragOver = ExprMemoDragOver
+    ParentFont = False
+    TabOrder = 0
+    WantReturns = False
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 37
+    Top = 509
+    Width = 640
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 37
+    ClientWidth = 640
+    TabOrder = 1
+    object OkB: TButton
+      Left = 4
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'OK'
+      ModalResult = 1
+      TabOrder = 0
+    end
+    object CancelB: TButton
+      Left = 84
+      Height = 25
+      Top = 8
+      Width = 75
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 19
+    Top = 431
+    Width = 640
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 19
+    ClientWidth = 640
+    TabOrder = 2
+    object ExprL: TLabel
+      Left = 4
+      Height = 15
+      Top = 2
+      Width = 57
+      Caption = 'Expression:'
+      ParentColor = False
+    end
+  end
+  object Panel: TPanel
+    Left = 0
+    Height = 431
+    Top = 0
+    Width = 640
+    Align = alClient
+    BevelOuter = bvNone
+    TabOrder = 3
+  end
+end

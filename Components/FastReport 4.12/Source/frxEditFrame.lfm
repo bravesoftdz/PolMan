@@ -1,0 +1,278 @@
+object frxFrameEditorForm: TfrxFrameEditorForm
+  Left = 339
+  Height = 159
+  Top = 330
+  Width = 223
+  BorderStyle = bsDialog
+  Caption = 'Edit Frame'
+  ClientHeight = 159
+  ClientWidth = 223
+  Color = clBtnFace
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '1.1'
+  object FrameL: TLabel
+    Left = 8
+    Height = 17
+    Top = 12
+    Width = 74
+    Caption = 'Frame lines'
+    ParentColor = False
+  end
+  object LineL: TLabel
+    Left = 8
+    Height = 17
+    Top = 64
+    Width = 60
+    Caption = 'Line style'
+    ParentColor = False
+  end
+  object ShadowL: TLabel
+    Left = 8
+    Height = 17
+    Top = 92
+    Width = 51
+    Caption = 'Shadow'
+    ParentColor = False
+  end
+  object Bevel1: TBevel
+    Left = 4
+    Height = 2
+    Top = 116
+    Width = 215
+  end
+  object FLineL: TLabel
+    Left = 8
+    Height = 17
+    Top = 37
+    Width = 26
+    Caption = 'Line'
+    ParentColor = False
+  end
+  object OkB: TButton
+    Left = 60
+    Height = 25
+    Top = 124
+    Width = 75
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object CancelB: TButton
+    Left = 140
+    Height = 25
+    Top = 124
+    Width = 75
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object ToolBar1: TToolBar
+    Left = 72
+    Height = 22
+    Top = 8
+    Width = 149
+    Align = alNone
+    ButtonWidth = 22
+    EdgeBorders = []
+    TabOrder = 2
+    object FrameTopB: TToolButton
+      Tag = 1
+      Left = 1
+      Top = 0
+      AllowAllUp = True
+      ImageIndex = 32
+      OnClick = BClick
+      Style = tbsCheck
+    end
+    object FrameBottomB: TToolButton
+      Tag = 2
+      Left = 23
+      Top = 0
+      AllowAllUp = True
+      ImageIndex = 33
+      OnClick = BClick
+      Style = tbsCheck
+    end
+    object FrameLeftB: TToolButton
+      Tag = 3
+      Left = 45
+      Top = 0
+      AllowAllUp = True
+      ImageIndex = 34
+      OnClick = BClick
+      Style = tbsCheck
+    end
+    object FrameRightB: TToolButton
+      Tag = 4
+      Left = 67
+      Top = 0
+      AllowAllUp = True
+      ImageIndex = 35
+      OnClick = BClick
+      Style = tbsCheck
+    end
+    object Sep1: TToolButton
+      Left = 89
+      Top = 0
+      Width = 10
+      ImageIndex = 0
+      Style = tbsSeparator
+    end
+    object FrameAllB: TToolButton
+      Tag = 5
+      Left = 99
+      Top = 0
+      ImageIndex = 36
+      OnClick = BClick
+    end
+    object FrameNoB: TToolButton
+      Tag = 6
+      Left = 121
+      Top = 0
+      ImageIndex = 37
+      OnClick = BClick
+    end
+  end
+  object ToolBar2: TToolBar
+    Left = 72
+    Height = 23
+    Top = 60
+    Width = 114
+    Align = alNone
+    ButtonHeight = 23
+    EdgeBorders = []
+    TabOrder = 3
+    object FrameColorB: TToolButton
+      Tag = 7
+      Left = 61
+      Top = 0
+      ImageIndex = 39
+      OnClick = BClick
+    end
+    object FrameStyleB: TToolButton
+      Tag = 8
+      Left = 84
+      Top = 0
+      ImageIndex = 40
+      OnClick = BClick
+    end
+    object Sep2: TfrxTBPanel
+      Left = 1
+      Height = 23
+      Top = 0
+      Width = 60
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 23
+      ClientWidth = 60
+      TabOrder = 0
+      object FrameWidthCB: TfrxComboBox
+        Tag = 9
+        Left = 5
+        Height = 23
+        Top = 2
+        Width = 56
+        ItemHeight = 0
+        Items.Strings = (
+          '0,1'
+          '0,5'
+          '1'
+          '1,5'
+          '2'
+          '3'
+          '4'
+          '5'
+          '6'
+          '7'
+          '8'
+          '9'
+          '10'
+        )
+        ListWidth = 0
+        TabOrder = 0
+        Text = ' '
+        OnChange = BClick
+      end
+    end
+  end
+  object ToolBar3: TToolBar
+    Left = 72
+    Height = 23
+    Top = 88
+    Width = 112
+    Align = alNone
+    ButtonHeight = 23
+    EdgeBorders = []
+    TabOrder = 4
+    object ShadowB: TToolButton
+      Tag = 10
+      Left = 61
+      Top = 0
+      AllowAllUp = True
+      ImageIndex = 60
+      OnClick = BClick
+      Style = tbsCheck
+    end
+    object ShadowColorB: TToolButton
+      Tag = 11
+      Left = 84
+      Top = 0
+      ImageIndex = 39
+      OnClick = BClick
+    end
+    object Sep3: TfrxTBPanel
+      Left = 1
+      Height = 23
+      Top = 0
+      Width = 60
+      Align = alLeft
+      BevelOuter = bvNone
+      ClientHeight = 23
+      ClientWidth = 60
+      TabOrder = 0
+      object ShadowWidthCB: TfrxComboBox
+        Tag = 12
+        Left = 5
+        Height = 23
+        Top = 2
+        Width = 56
+        ItemHeight = 0
+        Items.Strings = (
+          '1'
+          '2'
+          '3'
+          '4'
+          '5'
+          '6'
+          '7'
+          '8'
+          '9'
+          '10'
+        )
+        ListWidth = 0
+        TabOrder = 0
+        Text = ' '
+        OnChange = BClick
+      end
+    end
+  end
+  object FrameLineCB: TfrxComboBox
+    Left = 72
+    Height = 23
+    Top = 34
+    Width = 91
+    ItemHeight = 0
+    ListWidth = 0
+    TabOrder = 5
+    ReadOnly = True
+    OnChange = BClick
+  end
+end

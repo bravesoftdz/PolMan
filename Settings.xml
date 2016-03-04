@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Settings WindowsAuthentication="True" Login="db_user" Password="" AutoLogin="True">
+	<Connections DefaultConnection="1">
+		<Connection>
+			<Server>LOCALHOST\SQLEXPRESS</Server>
+			<Database>db_pman_devco</Database>
+			<Name>EBN</Name>
+			<Icon>graphics\toolbuttons\Devco.bmp</Icon>
+		</Connection>
+		<Connection>
+			<Server>LOCALHOST\SQLEXPRESS</Server>
+			<Database>db_pman_devco</Database>
+			<Name>Prudential</Name>
+			<Icon>graphics\toolbuttons\EBN.bmp</Icon>
+		</Connection>
+		<Connection>
+			<Server>LOCALHOST\SQLEXPRESS</Server>
+			<Database>db_pman_devco</Database>
+			<Name>Test 2</Name>
+			<Icon>graphics\toolbuttons\Client.bmp</Icon>
+		</Connection>
+		<Connection>
+			<Server>LOCALHOST\SQLEXPRESS</Server>
+			<Database>db_pman_devco</Database>
+			<Name>Test 3</Name>
+			<Icon>graphics\toolbuttons\brokers.bmp</Icon>
+		</Connection>
+		<Connection>
+			<Server>LOCALHOST\SQLEXPRESS</Server>
+			<Database>db_pman_devco</Database>
+			<Name>Test 4</Name>
+			<Icon>graphics\toolbuttons\policies.bmp</Icon>
+		</Connection>
+	</Connections>
+</Settings>

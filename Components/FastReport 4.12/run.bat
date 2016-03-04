@@ -1,0 +1,2 @@
+cd /d "G:\Disque Sauvegardes\Delphi\Composants\FastReport 4.12 XE2\LibD15\"
+"C:\Program Files\Embarcadero\RAD Studio\8.0\Bin\dcc32.exe" dclfrx15.dpk -M -Z -JPHNE -JL -DTeeChartStd;QBUILDER

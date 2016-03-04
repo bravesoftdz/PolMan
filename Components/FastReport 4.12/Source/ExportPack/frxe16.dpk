@@ -1,0 +1,74 @@
+// Package file for Delphi 2009
+
+package frxe16;
+
+
+{$I frx.inc}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  vclimg,
+  frx16;
+
+contains
+  frxSendMAPI in 'frxSendMAPI.pas',
+  frxExportHTML in 'frxExportHTML.pas',
+  frxExportImage in 'frxExportImage.pas',
+  Gif in 'GIF.pas',
+  frxImageConverter in 'frxImageConverter.pas',
+  frxExportMatrix in 'frxExportMatrix.pas',
+  frxExportPDF in 'frxExportPDF.pas',
+  frxExportRTF in 'frxExportRTF.pas',
+  frxExportCSV in 'frxExportCSV.pas',
+  frxExportText in 'frxExportText.pas',
+  frxZip in 'frxZip.pas',
+  frxFileUtils in 'frxFileUtils.pas',
+//  frxPDFFile in 'frxPDFFile.pas',
+  frxRC4 in 'frxRC4.pas',
+  frxGML in 'frxGML.pas',
+  frxNetUtils in 'frxNetUtils.pas',
+{$IFNDEF RAD_ED}
+  frxSMTP in 'frxSMTP.pas',
+  frxExportMail in 'frxExportMail.pas',
+  frxExportODF in 'frxExportODF.pas',
+  frxExportDBF in 'frxExportDBF.pas',
+  frxExportBIFF in 'frxExportBIFF.pas',
+  frxExportXLS in 'frxExportXLS.pas',
+  frxExportXML in 'frxExportXML.pas',
+  frxCBFF in'frxCBFF.pas',
+  frxOLEPS in 'frxOLEPS.pas',
+  frxDraftPool in 'frxDraftPool.pas',
+  frxBiffConverter in 'frxBiffConverter.pas',
+  frxBIFF in 'frxBIFF.pas',
+  frxStorage in 'frxStorage.pas',
+  frxEscher in 'frxEscher.pas',
+  frxCrypto in 'frxCrypto.pas',
+{$ENDIF}
+
+
+  frxrcExports in 'frxrcExports.pas';
+
+end.

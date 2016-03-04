@@ -1,0 +1,117 @@
+object frxFormatEditorForm: TfrxFormatEditorForm
+  Left = 196
+  Height = 264
+  Top = 109
+  Width = 316
+  BorderStyle = bsDialog
+  Caption = 'Display Format'
+  ClientHeight = 264
+  ClientWidth = 316
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '0.9.31'
+  object OkB: TButton
+    Left = 156
+    Height = 25
+    Top = 232
+    Width = 75
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object CancelB: TButton
+    Left = 236
+    Height = 25
+    Top = 232
+    Width = 75
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object CategoryL: TGroupBox
+    Left = 4
+    Height = 137
+    Top = 4
+    Width = 151
+    Caption = 'Category'
+    ClientHeight = 115
+    ClientWidth = 145
+    TabOrder = 2
+    object CategoryLB: TListBox
+      Left = 2
+      Height = 105
+      Top = 2
+      Width = 133
+      ItemHeight = 0
+      OnClick = CategoryLBClick
+      TabOrder = 0
+    end
+  end
+  object FormatL: TGroupBox
+    Left = 160
+    Height = 137
+    Top = 4
+    Width = 151
+    Caption = 'Format'
+    ClientHeight = 115
+    ClientWidth = 145
+    TabOrder = 3
+    object FormatLB: TListBox
+      Left = 8
+      Height = 105
+      Top = 2
+      Width = 133
+      ItemHeight = 13
+      OnClick = FormatLBClick
+      OnDrawItem = FormatLBDrawItem
+      Style = lbOwnerDrawFixed
+      TabOrder = 0
+    end
+  end
+  object GroupBox1: TGroupBox
+    Left = 4
+    Height = 73
+    Top = 146
+    Width = 307
+    ClientHeight = 51
+    ClientWidth = 301
+    TabOrder = 4
+    object FormatStrL: TLabel
+      Left = 9
+      Height = 18
+      Top = 7
+      Width = 97
+      Caption = 'Format string:'
+      ParentColor = False
+    end
+    object SeparatorL: TLabel
+      Left = 9
+      Height = 18
+      Top = 35
+      Width = 130
+      Caption = 'Decimal separator:'
+      ParentColor = False
+    end
+    object FormatE: TEdit
+      Left = 153
+      Height = 21
+      Top = 3
+      Width = 133
+      TabOrder = 0
+    end
+    object SeparatorE: TEdit
+      Left = 153
+      Height = 21
+      Top = 31
+      Width = 25
+      TabOrder = 1
+      Text = ','
+    end
+  end
+end

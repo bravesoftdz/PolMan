@@ -1,0 +1,42 @@
+package Rz30DBCtls_Dsgn70;
+
+{$R Rz30DBCtls_Dsgn.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $50C00000}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+//{$I Rz30DBCtls_Description.inc}
+{$DESCRIPTION 'Raize Components 3.0.9 (Data-Aware)'}
+requires
+  VCL,
+  DesignIDE,
+  DclDB,
+  Rz30Ctls_Dsgn70,
+  Rz30DBCtls70;
+
+contains
+//  {$I Rz30DBCtls_Dsgn_Contains.inc}
+  Rz30DBCtls_Reg       in 'Rz30DBCtls_Reg.pas',
+  RzDBDesignEditors    in 'RzDBDesignEditors.pas',
+  RzDBNavEditor        in 'RzDBNavEditor.pas',
+  RzDBRadioGroupEditor in 'RzDBRadioGroupEditor.pas';
+end.

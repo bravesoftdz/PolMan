@@ -1,0 +1,135 @@
+object frxSearchDialog: TfrxSearchDialog
+  Left = 200
+  Height = 230
+  Top = 108
+  Width = 252
+  BorderStyle = bsDialog
+  Caption = 'Find text'
+  ClientHeight = 230
+  ClientWidth = 252
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '0.9.29'
+  object ReplacePanel: TPanel
+    Left = 0
+    Height = 52
+    Top = 49
+    Width = 252
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 52
+    ClientWidth = 252
+    TabOrder = 1
+    Visible = False
+    object ReplaceL: TLabel
+      Left = 8
+      Height = 17
+      Top = 4
+      Width = 76
+      Caption = 'Replace with'
+      FocusControl = ReplaceE
+      ParentColor = False
+    end
+    object ReplaceE: TEdit
+      Left = 8
+      Height = 21
+      Top = 20
+      Width = 237
+      HelpContext = 98
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 49
+    Top = 0
+    Width = 252
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 49
+    ClientWidth = 252
+    TabOrder = 0
+    object TextL: TLabel
+      Left = 8
+      Height = 17
+      Top = 4
+      Width = 67
+      Caption = 'Text to find'
+      FocusControl = TextE
+      ParentColor = False
+    end
+    object TextE: TEdit
+      Left = 8
+      Height = 21
+      Top = 20
+      Width = 237
+      HelpContext = 98
+      TabOrder = 0
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 131
+    Top = 101
+    Width = 252
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 131
+    ClientWidth = 252
+    TabOrder = 2
+    object OkB: TButton
+      Left = 88
+      Height = 25
+      Top = 91
+      Width = 75
+      HelpContext = 40
+      Caption = 'OK'
+      Default = True
+      ModalResult = 1
+      TabOrder = 0
+    end
+    object CancelB: TButton
+      Left = 170
+      Height = 25
+      Top = 91
+      Width = 75
+      HelpContext = 50
+      Cancel = True
+      Caption = 'Cancel'
+      ModalResult = 2
+      TabOrder = 1
+    end
+    object SearchL: TGroupBox
+      Left = 8
+      Height = 83
+      Top = 0
+      Width = 237
+      Caption = 'Search options'
+      ClientHeight = 63
+      ClientWidth = 233
+      TabOrder = 2
+      object CaseCB: TCheckBox
+        Left = 8
+        Height = 21
+        Top = 33
+        Width = 112
+        HelpContext = 107
+        Caption = 'Case sensitive'
+        TabOrder = 0
+      end
+      object TopCB: TCheckBox
+        Left = 8
+        Height = 21
+        Top = 9
+        Width = 122
+        Caption = 'Search from top'
+        TabOrder = 1
+      end
+    end
+  end
+end

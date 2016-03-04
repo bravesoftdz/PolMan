@@ -1,0 +1,36 @@
+object frxReportTreeForm: TfrxReportTreeForm
+  Left = 185
+  Height = 319
+  Top = 107
+  Width = 179
+  BorderStyle = bsSizeToolWin
+  Caption = 'Report Tree'
+  ClientHeight = 319
+  ClientWidth = 179
+  DragKind = dkDock
+  DragMode = dmAutomatic
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '0.9.31'
+  object Tree: TTreeView
+    Left = 0
+    Height = 319
+    Top = 0
+    Width = 179
+    Align = alClient
+    BorderStyle = bsNone
+    DefaultItemHeight = 16
+    HideSelection = False
+    Indent = 19
+    ReadOnly = True
+    ShowRoot = False
+    TabOrder = 0
+    OnChange = TreeChange
+    OnKeyDown = TreeKeyDown
+    Options = [tvoAutoItemHeight, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoToolTips, tvoThemedDraw]
+  end
+end

@@ -1,0 +1,256 @@
+object frxDMPExportDialog: TfrxDMPExportDialog
+  Left = 215
+  Height = 276
+  Top = 168
+  Width = 481
+  ActiveControl = OK
+  BorderStyle = bsDialog
+  Caption = 'Print'
+  ClientHeight = 276
+  ClientWidth = 481
+  KeyPreview = True
+  OnCreate = FormCreate
+  OnHide = FormHide
+  OnKeyDown = FormKeyDown
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '0.9.29'
+  object Image1: TImage
+    Left = 219
+    Height = 16
+    Top = 236
+    Width = 18
+    AutoSize = True
+    Picture.Data = {
+      07544269746D617036010000424D360100000000000076000000280000001200
+      0000100000000100040000000000C00000000000000000000000100000001000
+      000000000000000080000080000000808000800000008000800080800000C0C0
+      C000808080000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFF
+      FF00333333333333333333000000333333300033333333000000333330088800
+      33333300000033300887888800333300000030088777888888003300000038F7
+      777F888888880300000038F77FF7778888880300000038FFF779977788880300
+      000038F77AA777770788030000003388F77777FF070033000000333388F8FFFF
+      F0333300000033333388FFFFFF0333000000333333338FFFFFF0030000003333
+      333338FFF8833300000033333333338883333300000033333333333333333300
+      0000
+    }
+    Visible = False
+  end
+  object OK: TButton
+    Left = 321
+    Height = 25
+    Top = 246
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'OK'
+    Default = True
+    ModalResult = 1
+    TabOrder = 0
+  end
+  object Cancel: TButton
+    Left = 401
+    Height = 25
+    Top = 246
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Cancel = True
+    Caption = 'Cancel'
+    ModalResult = 2
+    TabOrder = 1
+  end
+  object PrinterL: TGroupBox
+    Left = 4
+    Height = 53
+    Top = 4
+    Width = 473
+    Caption = 'Printer'
+    ClientHeight = 33
+    ClientWidth = 469
+    TabOrder = 2
+    object PrinterCB: TComboBox
+      Left = 8
+      Height = 21
+      Top = 2
+      Width = 457
+      HelpContext = 142
+      ItemHeight = 16
+      OnClick = PrinterCBClick
+      OnDrawItem = PrinterCBDrawItem
+      Style = csOwnerDrawFixed
+      TabOrder = 0
+    end
+  end
+  object EscL: TGroupBox
+    Left = 4
+    Height = 53
+    Top = 60
+    Width = 261
+    Caption = 'Command type'
+    ClientHeight = 33
+    ClientWidth = 257
+    TabOrder = 3
+    object EscCB: TComboBox
+      Left = 8
+      Height = 21
+      Top = 2
+      Width = 244
+      ItemHeight = 0
+      Style = csDropDownList
+      TabOrder = 0
+    end
+  end
+  object CopiesL: TGroupBox
+    Left = 272
+    Height = 53
+    Top = 60
+    Width = 205
+    Caption = 'Copies'
+    ClientHeight = 33
+    ClientWidth = 201
+    TabOrder = 4
+    object CopiesNL: TLabel
+      Left = 14
+      Height = 13
+      Top = 6
+      Width = 101
+      AutoSize = False
+      Caption = 'Number of copies'
+      ParentColor = False
+    end
+    object CopiesE: TEdit
+      Left = 122
+      Height = 21
+      Top = 2
+      Width = 37
+      MaxLength = 5
+      TabOrder = 0
+      Text = '1'
+    end
+    object CopiesUD: TUpDown
+      Left = 159
+      Height = 21
+      Top = 2
+      Width = 16
+      Associate = CopiesE
+      Min = 1
+      Max = 9999
+      Position = 1
+      TabOrder = 1
+      Wrap = False
+    end
+  end
+  object PagesL: TGroupBox
+    Left = 4
+    Height = 121
+    Top = 116
+    Width = 261
+    Caption = 'Pages'
+    ClientHeight = 101
+    ClientWidth = 257
+    TabOrder = 5
+    object DescrL: TLabel
+      Left = 3
+      Height = 29
+      Top = 66
+      Width = 249
+      AutoSize = False
+      Caption = 'Enter page numbers and/or page ranges, separated by commas. For example, 1,3,5-12'
+      ParentColor = False
+      WordWrap = True
+    end
+    object AllRB: TRadioButton
+      Left = 3
+      Height = 22
+      Top = 2
+      Width = 38
+      HelpContext = 108
+      Caption = 'All'
+      Checked = True
+      State = cbChecked
+      TabOrder = 0
+    end
+    object CurPageRB: TRadioButton
+      Left = 3
+      Height = 22
+      Top = 22
+      Width = 103
+      HelpContext = 118
+      Caption = 'Current page'
+      TabOrder = 1
+      TabStop = False
+    end
+    object PageNumbersRB: TRadioButton
+      Left = 3
+      Height = 22
+      Top = 42
+      Width = 63
+      HelpContext = 124
+      Caption = 'Pages:'
+      TabOrder = 2
+      TabStop = False
+    end
+    object RangeE: TEdit
+      Left = 83
+      Height = 21
+      Top = 42
+      Width = 165
+      OnEnter = RangeEEnter
+      TabOrder = 3
+    end
+  end
+  object OptionsL: TGroupBox
+    Left = 272
+    Height = 121
+    Top = 116
+    Width = 205
+    Caption = 'Options'
+    ClientHeight = 101
+    ClientWidth = 201
+    TabOrder = 6
+    object SaveToFileCB: TCheckBox
+      Left = 8
+      Height = 21
+      Top = 2
+      Width = 87
+      Caption = 'Print to file'
+      Checked = True
+      State = cbChecked
+      TabOrder = 0
+    end
+    object PageBreaksCB: TCheckBox
+      Left = 8
+      Height = 21
+      Top = 26
+      Width = 98
+      Caption = 'Page breaks'
+      Checked = True
+      State = cbChecked
+      TabOrder = 1
+    end
+    object OemCB: TCheckBox
+      Left = 8
+      Height = 21
+      Top = 46
+      Width = 117
+      Caption = 'OEM codepage'
+      Checked = True
+      State = cbChecked
+      TabOrder = 2
+    end
+    object PseudoCB: TCheckBox
+      Left = 8
+      Height = 21
+      Top = 68
+      Width = 113
+      Caption = 'Pseudographic'
+      Checked = True
+      State = cbChecked
+      TabOrder = 3
+    end
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.prn'
+    left = 248
+    top = 232
+  end
+end
